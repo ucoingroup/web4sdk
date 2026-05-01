@@ -1,0 +1,41 @@
+{
+  "name": "@eaco/web4sdk",
+  "version": "1.0.0",
+  "description": "EACO Web4 SDK — 连接虚拟宇宙与去中心化金融的开发者工具包",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "eaco",
+    "web4",
+    "sdk",
+    "solana",
+    "defi",
+    "blockchain",
+    "agent-world"
+  ],
+  "author": "EACO Group",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ucoingroup/web4sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ucoingroup/web4sdk/issues"
+  },
+  "homepage": "https://github.com/ucoingroup/web4sdk#readme",
+  "dependencies": {
+    "@solana/web3.js": "^1.87.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0"
+  }
+}

@@ -1,94 +1,70 @@
-# web4sdk
-eaco web4 sdk
+# Web4SDK
 
+> EACO Web4 SDK — 连接虚拟宇宙与去中心化金融的开发者工具包
 
+## 简介
 
-------
+Web4SDK 是 EACO 生态系统的官方开发工具包，为开发者提供与 EACO 代币、虚拟宇宙（Virtual Universe）及 Agent World 集成的标准化接口。
 
-# virtual-universe
-virtual universe，How can eaco integrate with the virtual universe and facilitate the circulation and use of eaco within it?
+## 特性
 
-https://github.com/eaco-group/virtual-universe
+- 🔗 **区块链交互** — Solana 链上代币操作
+- 🤖 **Agent World 集成** — Coze Agent 生态对接
+- 🌐 **虚拟宇宙支持** — 元宇宙场景 SDK
+- 💰 **DeFi 工具** — 代币交换、流动性池接口
 
-## about eaco
+## 安装
 
-The only $eaco in the universe and the earth,
-EACO ($eaco) is an innovative small currency, the only $eaco in the universe and the earth,
-CA:
-DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH
-As the MEME coin of villagers around the Earth, EACO aims to promote environmental protection and sustainable development, integrate decentralized finance and digital assets, and become the representative of future personal core assets.
+```bash
+npm install @eaco/web4sdk
+# 或
+yarn add @eaco/web4sdk
+```
 
-EACO(Earth's Best Coin)
+## 快速开始
 
+```javascript
+import { Web4SDK } from '@eaco/web4sdk';
 
-https://orbmarkets.io/token/DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH
+const sdk = new Web4SDK({
+  network: 'mainnet-beta',
+  tokenAddress: 'DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH'
+});
 
-https://www.orca.so/pools?tokens=DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH
+// 获取代币信息
+const tokenInfo = await sdk.token.getInfo();
+console.log(tokenInfo);
+```
 
-https://raydium.io/swap/?inputMint=sol&outputMint=DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH
+## API 文档
 
-https://discord.gg/HWsweV6fFy
+### Token 模块
 
+| 方法 | 描述 | 参数 |
+|------|------|------|
+| `token.getInfo()` | 获取代币基本信息 | 无 |
+| `token.getBalance(wallet)` | 查询钱包余额 | `wallet: string` |
+| `token.transfer(to, amount)` | 转账 | `to: string, amount: number` |
 
+### Agent World 模块
 
-## 加入Coze Agent World：https://world.coze.site/skill.md
+| 方法 | 描述 |
+|------|------|
+| `agentWorld.register()` | 注册 Agent |
+| `agentWorld.joinMatch(matchId)` | 加入合成交易所比赛 |
 
- EACO 成功入驻coze Agent World！2026
+## 相关链接
 
-🌍 EACO × Agent World 集成 — 完成报告
+- [EACO 代币信息](https://orbmarkets.io/token/DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
+- [Orca 流动性池](https://www.orca.so/pools?tokens=DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
+- [Raydium 交易](https://raydium.io/swap/?inputMint=sol&outputMint=DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
+- [Discord 社区](https://discord.gg/HWsweV6fFy)
+- [Coze Agent World](https://world.coze.site/skill.md)
 
-🎯 已完成
+## 许可证
 
-1. Agent World 注册 ✅
+MIT License — 详见 [LICENSE](./LICENSE)
 
-Agent Name: eaco-global
+---
 
-Agent ID: f649c870-99cd-4e9a-8223-8a8a06520094
-
-Agent URL: https://world.coze.site/agent/f649c870-99cd-4e9a-8223-8a8a06520094
-
-
-2. Synthetic Exchange 参赛 ✅
-
-比赛 ID: match_1777000323458
-
-席位: 1/8（已锁定）
-
-状态: waiting（等待8位Agent参赛后启动）
-
-观战: https://synthetic.coze.site/match/match_1777000323458
-
-3. 跨平台曝光 ✅
-
-135,248+ 个 AI Agent 已覆盖
-
-全球开发者/用户可通过 Agent World 发现 EACO
-
-📊 EACO 全球 Agent 网络
-
-渠道    状态    覆盖
-
-Agent World    ✅ 已入驻    135,248+ Agent
-
-Telegram 7群    ✅ 运行中    6亿+用户
-
-Twitter        海外主战场
-
-Discord        社区频道
-
-📁 已创建文件
-
-openclaw/config/skills/eaco-agent-world/SKILL.md — Agent World 技能
-
-memory/2026-04-24.md — 记忆已更新
-
-⚠️ 注意事项
-
-合成交易所需要 8 位 Agent 参赛才启动交易
-
-可邀请其他 EACO 社区成员也入驻 Agent World，共同推动开赛
-
-
-## How can EACO evolve into “EACO — Earth’s Best WEB3 + AI + RWA Coin”? 
-
-What approaches and methods can make this possible?
+EACO — Earth's Best WEB3 + AI + RWA Coin
