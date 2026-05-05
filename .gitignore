@@ -27,6 +27,8 @@ lib/
 # OS
 .DS_Store
 Thumbs.db
+Desktop.ini
+ehthumbs.db
 
 # Logs
 logs/
@@ -40,3 +42,30 @@ coverage/
 tmp/
 temp/
 *.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+eggs/
+.eggs/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+venv/
+.venv/
+ENV/
+env/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
