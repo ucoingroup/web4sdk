@@ -38,6 +38,9 @@ logs/
 coverage/
 .nyc_output/
 
+# Package artifacts
+*.tgz
+
 # Temporary files
 tmp/
 temp/
