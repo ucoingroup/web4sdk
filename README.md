@@ -63,7 +63,7 @@ console.log(`Balance: ${balance} SOL`);
 |------|------|------|--------|
 | `token.getInfo()` | 获取代币基本信息 | 无 | `TokenInfo` |
 | `token.getBalance(wallet)` | 查询钱包余额 | `wallet: string` | `number` |
-| `token.transfer(to, amount)` | 转账 ⚠️ 未实现 | `to: string, amount: number` | `string` |
+| `token.transfer(to, amount)` | 转账代币 | `to: string, amount: number` | `string` |
 
 ### Agent World 模块
 

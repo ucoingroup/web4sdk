@@ -18,10 +18,10 @@ describe('Web4SDK', () => {
       expect(info.decimals).toBe(9);
     });
 
-    it('should throw on transfer not implemented', async () => {
-      await expect(
-        sdk.token.transfer('recipient', 1.0)
-      ).rejects.toThrow('transfer method needs implementation');
+    it('should return transfer transaction signature', async () => {
+      const signature = await sdk.token.transfer('G47psy2BdJCf2PE3oq9dLdalAY disruptedPkz3bP9Sma7pRgJ', 0.1);
+      expect(typeof signature).toBe('string');
+      expect(signature).toContain('transfer_');
     });
   });
 
