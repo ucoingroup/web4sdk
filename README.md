@@ -110,9 +110,20 @@ npm run lint
 
 欢迎贡献！请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解详情。
 
+## 错误处理
+
+```typescript
+try {
+  const balance = await sdk.token.getBalance('YOUR_WALLET_ADDRESS');
+} catch (error) {
+  console.error('查询失败:', error.message);
+}
+```
+
 ## 相关链接
 
 - [EACO 代币信息](https://orbmarkets.io/token/DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
+- [Solana Explorer](https://explorer.solana.com/address/DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
 - [Orca 流动性池](https://www.orca.so/pools?tokens=DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
 - [Raydium 交易](https://raydium.io/swap/?inputMint=sol&outputMint=DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
 - [Discord 社区](https://discord.gg/HWsweV6fFy)

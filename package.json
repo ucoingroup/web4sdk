@@ -37,6 +37,11 @@
     "url": "https://github.com/ucoingroup/web4sdk/issues"
   },
   "homepage": "https://github.com/ucoingroup/web4sdk#readme",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "engines": {
     "node": ">=16.0.0"
   },
