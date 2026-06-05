@@ -101,7 +101,9 @@ export class Web4SDK {
           })
         );
         
-        // 返回占位交易签名（实际使用时需要签名者）
+        // TODO: 集成钱包适配器（Phantom/Solflare）完成实际签名
+        // 当前为框架实现，实际使用需配合 WalletAdapter
+        console.warn('transfer: 需要钱包适配器完成签名，当前返回占位签名');
         return `transfer_${Date.now()}_pending_signature`;
       }
     };

@@ -120,6 +120,20 @@ try {
 }
 ```
 
+## 类型导出
+
+SDK 导出以下 TypeScript 类型，可直接导入使用：
+
+```typescript
+import { Web4SDKConfig, TokenInfo, AgentConfig } from '@eaco/web4sdk';
+```
+
+## 安全注意事项
+
+- **切勿**在客户端代码中硬编码私钥或 Keypair
+- `transfer` 方法当前为框架实现，需配合钱包适配器（如 Phantom）完成签名
+- 生产环境建议使用自定义 RPC 节点，避免公共 RPC 限流
+
 ## 相关链接
 
 - [EACO 代币信息](https://orbmarkets.io/token/DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
