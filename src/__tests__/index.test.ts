@@ -19,7 +19,7 @@ describe('Web4SDK', () => {
     });
 
     it('should return transfer transaction signature', async () => {
-      const signature = await sdk.token.transfer('G47psy2BdJCf2PE3oq9dLdalAY disruptedPkz3bP9Sma7pRgJ', 0.1);
+      const signature = await sdk.token.transfer('G47psy2BdJCf2PE3oq9dLdalAYxPkz3bP9Sma7pRgJ', 0.1);
       expect(typeof signature).toBe('string');
       expect(signature).toContain('transfer_');
     });
