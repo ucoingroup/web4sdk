@@ -74,4 +74,18 @@ dmypy.json
 
 # Package manager
 .pnpm-store/
+pnpm-lock.yaml
 *.bak
+
+# Corepack
+corepack_cache/
+.node_repl_history
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
