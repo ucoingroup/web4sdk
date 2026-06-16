@@ -1,58 +1,63 @@
 # Web4SDK 自动优化报告
 
 **仓库**: ucoingroup/web4sdk
-**时间**: 2026-05-06 15:03 (Asia/Shanghai)
-**优化项**: 文档完善 + 项目工程化
+**时间**: 2026-06-16 15:01 (Asia/Shanghai)
+**Commit**: a0feca7
 
 ---
 
-## 一、原有文件评估
+## 一、本次优化项
+
+| 文件 | 优化内容 |
+|------|----------|
+| `README.md` | 新增 npm/TypeScript/Node.js 版本徽章 |
+| `package.json` | 新增 `exports` 字段（ESM模块解析）；新增 `virtual-universe` 关键字 |
+| `.npmignore` | 新增发布包排除规则（源码/测试/配置/IDE文件） |
+| `.github/workflows/ci.yml` | 新增 GitHub Actions CI：Node 18/20/22 矩阵构建 + lint + 类型检查 + 覆盖率上传 |
+
+---
+
+## 二、推送结果
 
 | 文件 | 状态 | 说明 |
 |------|------|------|
-| README.md | ✅ 完善 | SDK介绍、安装、API文档、示例代码齐全 |
-| LICENSE | ✅ 完善 | MIT许可证，内容规范 |
-| .gitignore | ✅ 完善 | Node.js+Python标准规则，.tsbuildinfo已忽略 |
-| package.json | ✅ 基础完善 | scripts/dependencies/keywords齐全 |
-| CONTRIBUTING.md | ✅ 完善 | 开发流程、代码规范、提交格式 |
-| tsconfig.json | ✅ 完善 | strict模式、declaration输出 |
-
-## 二、新增文件
-
-| 文件 | 说明 |
-|------|------|
-| `jest.config.js` | Jest配置：ts-jest预设、coverage、报告格式 |
-| `src/__tests__/index.test.ts` | 单元测试：覆盖token/agentWorld/virtualUniverse三模块 |
-| `.github/workflows/ci.yml` | GitHub Actions CI：Node 18/20矩阵构建+lint+test |
-| `.eslintrc.js` | ESLint TypeScript配置 |
-
-## 三、package.json 改进
-
-- 新增 `test:coverage` / `lint:fix` 脚本
-- 新增 `@typescript-eslint/eslint-plugin` / `parser` devDependency
+| README.md | ✅ 已推送 | |
+| package.json | ✅ 已推送 | |
+| .npmignore | ✅ 已推送 | |
+| .github/workflows/ci.yml | ❌ 推送被拒 | OAuth token 缺少 `workflow` scope |
 
 ---
 
-## ⚠️ 推送失败说明
+## ⚠️ workflow 文件推送失败
 
 ```
 remote rejected: refusing to allow an OAuth App to create or update 
 workflow `.github/workflows/ci.yml` without `workflow` scope
 ```
 
-**根因**: 当前 GitHub 认证令牌缺少 `workflow` scope，无法推送 `.github/workflows/` 目录。
+**根因**: GitHub OAuth Token 没有 `workflow` 权限。
 
-**解决方案**:
-1. 在 GitHub Settings → Developer settings → Personal access tokens 重新生成令牌，勾选 `workflow` 权限
-2. 然后执行：
+**解决方案（二选一）**：
+1. **推荐**：在 GitHub Settings → Developer settings → Personal access tokens 重新生成令牌，勾选 `workflow` 权限后推送
+2. **临时方案**：在本地手动推送 workflow 文件：
    ```bash
    cd C:\Users\Administrator\workspace\web4sdk
    git push origin main
    ```
+   （前提：使用有 workflow 权限的令牌重新配置 remote URL）
 
-## 四、后续建议
+---
 
-- [ ] 完善 `token.transfer()` 实现（目前 throw Error）
-- [ ] 添加 E2E 测试（集成 Solana Devnet 真实 RPC）
-- [ ] 配置 Codecov / Coveralls 覆盖率报告
-- [ ] 添加 release-it 自动发版流程
+## 三、项目当前状态
+
+| 项目 | 状态 |
+|------|------|
+| README.md | ✅ 完整（徽章 + 介绍 + API文档 + 示例） |
+| LICENSE | ✅ MIT |
+| .gitignore | ✅ Node.js + Python 标准规则 |
+| package.json | ✅ exports 字段 + keywords |
+| .npmignore | ✅ 发布包排除规则 |
+| CONTRIBUTING.md | ✅ 贡献流程 |
+| jest.config.js | ✅ Jest + coverage |
+| .eslintrc.js | ✅ TypeScript ESLint |
+| .github/workflows/ci.yml | ⚠️ 待手动推送（token 问题） |
