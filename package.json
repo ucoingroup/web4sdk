@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "EACO Web4 SDK — 连接虚拟宇宙与去中心化金融的开发者工具包",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
     "dist/**/*",
     "README.md",
@@ -38,6 +45,16 @@
   },
   "homepage": "https://github.com/ucoingroup/web4sdk#readme",
   "sideEffects": false,
+  "keywords": [
+    "eaco",
+    "web4",
+    "sdk",
+    "solana",
+    "defi",
+    "blockchain",
+    "agent-world",
+    "virtual-universe"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

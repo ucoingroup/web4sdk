@@ -1,0 +1,32 @@
+# Source
+src/
+__tests__/
+
+# Config
+.eslintrc.js
+jest.config.js
+tsconfig.json
+.gitignore
+.git/
+
+# CI/CD
+.github/
+
+# Docs
+OPTIMIZATION-REPORT.md
+CONTRIBUTING.md
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Test
+coverage/
+
+# Environment
+.env
+.env.*

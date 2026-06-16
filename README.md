@@ -1,5 +1,10 @@
 # Web4SDK
 
+[![npm version](https://img.shields.io/npm/v/@eaco/web4sdk)](https://www.npmjs.com/package/@eaco/web4sdk)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+
 > EACO Web4 SDK — 连接虚拟宇宙与去中心化金融的开发者工具包
 
 ## 简介
