@@ -25,15 +25,6 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint && npm test"
   },
-  "keywords": [
-    "eaco",
-    "web4",
-    "sdk",
-    "solana",
-    "defi",
-    "blockchain",
-    "agent-world"
-  ],
   "author": "EACO Group",
   "license": "MIT",
   "repository": {
