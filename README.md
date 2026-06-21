@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![CI](https://github.com/ucoingroup/web4sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/ucoingroup/web4sdk/actions/workflows/ci.yml)
 
 > EACO Web4 SDK — 连接虚拟宇宙与去中心化金融的开发者工具包
 
@@ -24,6 +25,8 @@ Web4SDK 是 EACO 生态系统的官方开发工具包，为开发者提供与 EA
 npm install @eaco/web4sdk
 # 或
 yarn add @eaco/web4sdk
+# 或
+pnpm add @eaco/web4sdk
 ```
 
 ## 快速开始

@@ -74,6 +74,7 @@ dmypy.json
 
 # Package manager
 .pnpm-store/
+.pnpm-debug.log*
 pnpm-lock.yaml
 *.bak
 
