@@ -142,6 +142,72 @@ import { Web4SDKConfig, TokenInfo, AgentConfig } from '@eaco/web4sdk';
 - `transfer` 方法当前为框架实现，需配合钱包适配器（如 Phantom）完成签名
 - 生产环境建议使用自定义 RPC 节点，避免公共 RPC 限流
 
+## 浏览器使用（CDN）
+
+通过 CDN 在浏览器中直接使用：
+
+```html
+<script src="https://unpkg.com/@eaco/web4sdk@latest/dist/index.umd.js"></script>
+<script>
+  const sdk = new Web4SDK({
+    network: 'mainnet-beta',
+    tokenAddress: 'DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH'
+  });
+  
+  sdk.token.getInfo().then(info => {
+    console.log('Token Info:', info);
+  });
+</script>
+```
+
+## 常见问题（FAQ）
+
+### Q: 我需要安装 Solana CLI 才能使用这个 SDK 吗？
+A: 不需要。SDK 通过 `@solana/web3.js` 库与 Solana 区块链交互，只需 Node.js 环境。
+
+### Q: 支持哪些 Node.js 版本？
+A: 支持 Node.js 16 及以上版本。建议使用 Node.js 18 或 20（LTS）。
+
+### Q: 如何在浏览器中使用？
+A: 可以通过 CDN 引入，或使用打包工具（webpack、vite、rollup）打包后使用。
+
+### Q: 是否支持其他区块链（如 Ethereum）？
+A: 当前版本仅支持 Solana 区块链。其他链的支持正在规划中。
+
+### Q: 如何报告 Bug？
+A: 请在 [GitHub Issues](https://github.com/ucoingroup/web4sdk/issues) 中提交 Bug 报告。
+
+### Q: 如何参与贡献？
+A: 请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解贡献流程。
+
+## 故障排查
+
+### 问题：安装失败
+
+```bash
+# 清除 NPM 缓存后重试
+npm cache clean --force
+npm install @eaco/web4sdk
+```
+
+### 问题：TypeScript 类型错误
+
+```bash
+# 确保安装了依赖的类型包
+npm install --save-dev @types/node
+```
+
+### 问题：网络请求超时
+
+```javascript
+// 使用自定义 RPC 节点
+const sdk = new Web4SDK({
+  network: 'mainnet-beta',
+  tokenAddress: 'DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH',
+  rpcUrl: 'https://your-custom-rpc.com'  // 使用自定义 RPC
+});
+```
+
 ## 相关链接
 
 - [EACO 代币信息](https://orbmarkets.io/token/DqfoyZH96RnvZusSp3Cdncjpyp3C74ZmJzGhjmHnDHRH)
