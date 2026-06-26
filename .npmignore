@@ -1,13 +1,14 @@
-# Source
+# Source (only needed for development)
 src/
 __tests__/
+*.test.ts
+*.spec.ts
 
 # Config
 .eslintrc.js
 jest.config.js
 tsconfig.json
 .gitignore
-.git/
 
 # CI/CD
 .github/
@@ -15,6 +16,8 @@ tsconfig.json
 # Docs
 OPTIMIZATION-REPORT.md
 CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
 
 # IDE
 .vscode/
