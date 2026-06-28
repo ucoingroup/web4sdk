@@ -82,9 +82,6 @@ pnpm-lock.yaml
 corepack_cache/
 .node_repl_history
 
-# TypeScript
-*.tsbuildinfo
-
 # Misc
 .cache/
 .parcel-cache/
